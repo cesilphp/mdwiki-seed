@@ -186,3 +186,17 @@ export class MyApp {
 | Android       | mode: 'md'     |
 | Windows       | mode: 'wp'     |
 위와 같은 값으로 config의 mode값을 변경하면 된다.
+
+### 색상 변경
+색상은 /app/theme/app.variables.scss 에 정리되어 있다. 만드는 앱의 테마 컬러에 맞게 변경시켜주면 된다.
+
+### SCSS 파일
+대부분 페이지를 새로 만들때
+/app/page/page.html
+/app/page/page.scss
+/app/page/page.ts
+식으로 3개의 파일을 만들게 된다. html과 ts는 바로 잘 빌드 되지만
+scss파일은 /app/theme/app.core.scss 파일에 
+@import "../pages/page/page";
+를 추가해줘야 포함되서 빌드가 된다.
+
